@@ -8,15 +8,12 @@
 
 <script>
 
-import axios from 'axios';
+
 
 export default {
 
   created() {
-    axios.get('https://fakestoreapi.com/products')
-      .then(res => {
-        console.log(res.data)
-      })
+    this.$store.dispatch('loadProducts');
   }
 }
 
